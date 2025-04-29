@@ -5,9 +5,9 @@ import { AppRouter } from './router/app-router';
 
 export const App = () => {
 	useEffect(() => {
-		console.log(localStorage.getItem('theme'));
-		if (localStorage.getItem('theme') === 'true')
+		if (localStorage.getItem('theme') === 'true') {
 			document.documentElement.classList.add('dark');
+		}
 	}, []);
 
 	return (

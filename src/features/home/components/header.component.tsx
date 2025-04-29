@@ -13,7 +13,9 @@ export const HomeHeader = () => {
 
 	const [fill, setFill] = useState('black');
 	useEffect(() => {
-		localStorage.getItem('theme') === 'false' ? setFill('black') : setFill('white');
+		localStorage.getItem('theme') === 'false' || !localStorage.getItem('theme')
+			? setFill('black')
+			: setFill('white');
 	}, []);
 	const navigate = useNavigate();
 
