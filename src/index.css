@@ -1,13 +1,52 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Boorsok';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(../public/fonts/boorsok.otf) format('woff2');
+	}
+}
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+	display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type='password']::-webkit-inner-spin-button,
+input[type='password']::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+input[type='password']::-webkit-credentials-auto-fill-button,
+input[type='password']::-webkit-textfield-decoration-container {
+	display: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+::-webkit-scrollbar {
+	width: 11px;
+	height: 11px;
+}
+
+::-webkit-scrollbar-track {
+	background: #edeff2;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #2175f3;
+	border-radius: 12px;
+}
+
+/* Internet Explorer и Microsoft Edge */
+body {
+	-ms-overflow-style: -ms-autohiding-scrollbar; /* скрытие скроллбара при неактивности */
 }

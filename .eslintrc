@@ -1,0 +1,45 @@
+{
+	"env": { "browser": true, "es2021": true },
+	"extends": [
+		"prettier",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"plugin:tailwindcss/recommended",
+		"plugin:react/recommended",
+	],
+	"parserOptions": {
+		"requireConfigFile": false,
+		"sourceType": "module",
+		"project": "./tsconfig.json",
+	},
+	"plugins": ["@typescript-eslint", "prettier", "import", "react"],
+	"rules": {
+		"@typescript-eslint/consistent-type-imports": "error",
+		"prettier/prettier": "error",
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"tailwindcss/no-unnecessary-arbitrary-value": "error",
+		"@typescript-eslint/no-unused-expressions": "off",
+		"import/no-named-as-default-member": "off",
+		"import/export": "off",
+		"react/display-name": "off",
+		"react/react-in-jsx-scope": "off",
+	},
+	"settings": {
+		"react": {
+			"version": "detect",
+		},
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true,
+				"node": {
+					"extensions": [".ts", ".tsx"],
+					"moduleDirectory": ["node_modules", "src/"],
+				},
+			},
+		},
+	},
+}
