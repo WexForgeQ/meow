@@ -62,6 +62,8 @@ export const HomeHeader = () => {
 							onClick={() => {
 								localStorage.removeItem('isAuth'),
 									localStorage.removeItem('profile');
+								localStorage.removeItem('appointments');
+								localStorage.removeItem('favoriteMasters');
 								navigate('');
 							}}
 							className="dark:text-white size-[60px] cursor-pointer"
